@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: trading-data-analyzer
+    buildCommand: poetry install
+    startCommand: streamlit run app.py
+    envVars:
+      - key: STREAMLIT_SERVER_HEADLESS
+        value: true
+      - key: STREAMLIT_SERVER_ADDRESS
+        value: 0.0.0.0
+      - key: STREAMLIT_SERVER_PORT
+        value: 10000  # Render may use a different port, so we'll set it to 10000 which is Render's default

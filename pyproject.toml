@@ -1,15 +1,21 @@
-[project]
-name = "repl-nix-workspace"
+[tool.poetry]
+name = "trading-data-analyzer"
 version = "0.1.0"
-description = "Add your description here"
-requires-python = ">=3.11"
-dependencies = [
-    "networkx>=3.4.2",
-    "numpy>=2.2.5",
-    "openpyxl>=3.1.5",
-    "pandas>=2.2.3",
-    "plotly>=6.0.1",
-    "python-dotenv>=1.1.0",
-    "scipy>=1.15.2",
-    "streamlit>=1.44.1",
-]
+description = "A sophisticated trading data analysis platform that enables deep insights into investment performance through advanced multi-dimensional filtering and statistical analysis."
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+networkx = "^3.4.2"
+numpy = "^2.2.5"
+openpyxl = "^3.1.5"
+pandas = "^2.2.3"
+plotly = "^6.0.1"
+python-dotenv = "^1.1.0"
+scipy = "^1.15.2"
+streamlit = "^1.44.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

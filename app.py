@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 import io
 import itertools
+import os
 from datetime import datetime, time
+from dotenv import load_dotenv
 from analyzer import analyze_trading_data, find_profitable_filters, calculate_summary_metrics
 from visualization import plot_profit_distribution, plot_filter_effectiveness, plot_win_rate_by_filter
 from advanced_analysis import (
@@ -13,6 +15,9 @@ from advanced_analysis import (
     detect_outlier_trades, create_decision_tree_visualization,
     find_optimal_filter_combinations, analyze_daily_performance
 )
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Set page configuration
 st.set_page_config(
